@@ -1,7 +1,9 @@
+const { NOTIMP } = require("dns");
 const express = require("express");
 const fs = require('fs');
 const ytdl = require('ytdl-core');
 const app = express();
+const port = process.env.PORT || 4000
 
 // first video example
 // app.get("/",(req,res)=>{
@@ -71,4 +73,4 @@ app.get("/download", async(req,res)=>{
 })
 
 
-app.listen(4000,console.log("working..."))
+app.listen(port,console.log("working..."))
